@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <digimantra.veedaters.CustomViews.TextViewSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_new"
+                android:textSize="16sp"
+                android:text="GET PREMIUM MEMBERSHIP"
+                android:layout_above="@+id/centerImage"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"/>
+            <ImageView android:id="@+id/centerImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/premium"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal|center_vertical"/>
+            <FrameLayout android:id="@+id/getMembership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:layout_alignParentBottom="true"
+                >
+
+                <!-- <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="60dp"
+                     android:background="@drawable/button_bg"
+                     android:scaleType="centerCrop"
+                     android:adjustViewBounds="true"
+                     android:src="@drawable/frame"/>-->
+                <ImageView android:id="@+id/logInImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    android:padding="6dp"
+                    android:src="@drawable/toplayer"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="GET MEMBERSHIP"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    />
+
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

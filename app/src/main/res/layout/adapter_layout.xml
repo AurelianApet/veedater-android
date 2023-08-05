@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--<ImageView android:id="@+id/image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:adjustViewBounds="true"
+    android:src="@drawable/place_holder"/>-->
+
+    <!--<cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/videocontroller1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomTab"/>-->
+   <!-- <View  android:layout_above="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
+    <ProgressBar android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?attr/progressBarStyle"
+        android:indeterminateTint="@color/pink"/>
+    <ImageView android:id="@+id/mainIMage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+    <RelativeLayout android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/color_gradient"
+
+        >
+        <ImageView
+            android:id="@+id/likeImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/like"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/likeImage"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/userSmallImage"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <digimantra.veedaters.CustomViews.TextReguler
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:text="NA"
+                        android:id="@+id/userName"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:id="@+id/genderImage"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/undifiine"
+                    />
+                    <digimantra.veedaters.CustomViews.TextReguler
+                        android:id="@+id/userAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:text=""/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/map_white"
+                        android:layout_marginLeft="5dp"
+                        />
+                    <digimantra.veedaters.CustomViews.TextReguler
+                        android:id="@+id/distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:text=""/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

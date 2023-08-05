@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:theme="@style/AppTheme1"
+    tools:context="digimantra.veedaters.Dashboard.Dashboard">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/toplayer"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back"
+                android:padding="15dp"
+                android:layout_marginTop="25dp"
+                />
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+              />
+           <!-- <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Block"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/chat"
+                />-->
+            <ImageView android:id="@+id/chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/new_three_dot"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="8dp"
+        android:background="@drawable/tooshdow"
+        ></View>
+    <FrameLayout
+        android:id="@+id/mainContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shadow"
+        android:layout_above="@+id/line"></FrameLayout>
+    <View android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#7B7B7B"
+        android:layout_above="@+id/bottomTab"
+        />
+    <LinearLayout
+        android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout android:id="@+id/nearBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView android:id="@+id/nearByImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/map"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:id="@+id/nearByText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nearby"
+                android:gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView android:id="@+id/messageImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/message"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:id="@+id/messageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/discovery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView android:id="@+id/discoveryImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/discovery"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:id="@+id/discoveryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vsearch"
+                android:gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView android:id="@+id/profileImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/profile"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:id="@+id/profileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/favorites"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView android:id="@+id/favoritesImage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/seting"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:id="@+id/favoritesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

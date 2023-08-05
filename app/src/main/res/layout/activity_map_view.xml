@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/toplayer"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/back"
+                android:visibility="visible"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                />
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Select Location"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"/>
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Done"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/filter"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/fill_filter"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="8dp"
+        android:background="@drawable/tooshdow"
+        ></View>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pin"
+        android:layout_gravity="center"/>
+    <AutoCompleteTextView
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:padding="10dp"
+        android:background="@drawable/background_transparent"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:hint="Enter Address"
+        android:singleLine="true" />
+</FrameLayout>
+    </LinearLayout>

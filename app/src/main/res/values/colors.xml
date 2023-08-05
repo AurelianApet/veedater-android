@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f31975</color>
+    <color name="colorPrimaryDark">#BC19A5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFF</color>
+    <!--<color name="ed_line">#D287D9</color>-->
+    <color name="ed_line">#B0B0B0</color>
+    <color name="pink">#EF1D78</color>
+    <color name="pink_fade">#ed8faf</color>
+    <color name="gray">#888888</color>
+    <color name="gray_new">#8E8E8E</color>
+    <color name="divider">#DADADA</color>
+    <color name="title">#979797</color>
+    <color name="subtitle">#414141</color>
+    <color name="black">#000</color>
+    <color name="black1">#404040</color>
+    <color name="chat">#CD29BE</color>
+    <color name="video">#B718AA</color>
+    <color name="delete">#E71A23</color>
+    <color name="receive">#E6E5EA</color>
+    <color name="txt_color">#3F3F3F</color>
+    <color name="first_color">#f31975</color>
+    <color name="second_color">#b818a9</color>
+    <color name="textPrimary">#f5f5f5</color>
+    <color name="textPrimaryDark">#95aab4</color>
+    <color name="errorText">#ff7878</color>
+</resources>

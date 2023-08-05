@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#EBEBF1">
+<digimantra.veedaters.CustomViews.TextViewSemiBold
+    android:id="@+id/price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#E01C89"
+    android:text="$30/per mnt"
+    android:layout_centerInParent="true"
+    android:layout_marginBottom="-7dp"
+    android:gravity="center"
+    android:textSize="30sp"
+    />
+    <digimantra.veedaters.CustomViews.TextReguler
+        android:id="@+id/time_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="For one month"
+        android:layout_below="@+id/price"
+        android:gravity="center"/>
+</RelativeLayout>

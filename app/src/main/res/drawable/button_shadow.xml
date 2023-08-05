@@ -1,0 +1,8 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shadow_color"/>
+    <item android:drawable="@drawable/round_gradient"
+        android:bottom="5px" />
+
+</layer-list>

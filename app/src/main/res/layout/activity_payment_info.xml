@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_payment_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="digimantra.veedaters.Dashboard.PaymentInfo">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/toplayer"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_new"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                />
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Complete Your Purchase"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+
+                />
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Edit"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"/>
+            <ImageView android:id="@+id/threeDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/new_three_dot"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <View android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@drawable/tooshdow"
+        ></View>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#EBEBF1">
+        <digimantra.veedaters.CustomViews.TextViewSemiBold
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E01C89"
+            android:text="$30/mo"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="-7dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            />
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:id="@+id/time_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="For one month"
+            android:layout_below="@+id/price"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp">
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black1"
+            android:textSize="16sp"
+            android:text="Card Number"
+            android:gravity="start"/>
+        <EditText android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/round"
+            android:inputType="number"
+            android:maxLength="16"
+            android:layout_marginTop="5dp"
+            />
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black1"
+            android:textSize="16sp"
+            android:text="Cardholder Name"
+            android:layout_marginTop="5dp"
+            android:gravity="start"/>
+        <EditText android:id="@+id/cardHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/round"
+            android:layout_marginTop="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="End Date"
+                android:layout_below="@+id/price"
+                android:gravity="start"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="End Date"
+                android:visibility="invisible"
+                android:layout_below="@+id/price"
+                android:gravity="center"/>
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="CVV"
+                android:layout_below="@+id/price"
+                android:gravity="start"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText android:id="@+id/monthTxt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/round"
+                android:hint="mm"
+                android:gravity="center"
+                android:inputType="date"
+                android:layout_marginTop="5dp"
+                />
+            <EditText android:id="@+id/yearTxt"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:background="@drawable/round"
+                android:layout_marginTop="5dp"
+                android:hint="yyyy"
+                android:gravity="center"
+                android:inputType="date"
+                android:layout_marginRight="5dp"
+                />
+            <EditText android:id="@+id/cvvTxt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:background="@drawable/round"
+                android:inputType="number"
+                android:maxLength="5"
+            android:layout_marginTop="5dp"
+            />
+
+        </LinearLayout>
+        <digimantra.veedaters.CustomViews.TextViewSemiBold
+            android:id="@+id/makePayment"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Make Payment"
+            android:layout_below="@+id/price"
+            android:background="@drawable/round_gradient"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

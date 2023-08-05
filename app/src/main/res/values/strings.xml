@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">VeeDaters</string>
+    <string name="app_id">545230792488161</string>
+    <!--<string name="facebook_app_id">545230792488161</string>-->
+    <!--<string name="facebook_app_id">315909332150648</string>-->
+    <!--Latest-->
+    <!--<string name="facebook_app_id">255699284965704</string>-->
+    <string name="facebook_app_id">1018070458336034</string>
+    <!--<string name="fb_login_protocol_scheme">fb545230792488161</string>-->
+    <!--<string name="fb_login_protocol_scheme">fb315909332150648</string>-->
+    <string name="fb_login_protocol_scheme">fb255699284965704</string>
+    <string name="google_secerete_id">Vl76isWIg1yqjKFV3B4sYDpc</string>
+    <string name="google_maps_key">AIzaSyD_cBQ6MXZMvkbw1opj2r_8HLwjCVrEbow</string>
+    <string name="server_client_id">388143196914-lctbiuer6khj2rlm16hcj87p4q6i9ggr.apps.googleusercontent.com</string>
+    <string name="custom_title">Select Image</string>
+    <string name="HockeyAppID">ac93cc7f39614155a3ecc510cd879895</string>
+    <string name="HockeySecret">419739c0199990d7c9886d4e57c6f0b5</string>
+    <string name="device_admin">Truiton Device Admin</string>
+    <string name="device_admin_description">Truiton\'s device admin implementation which shows the usage of DevicePolicyManager class.  This implementation provides you a way to control a device\'s security.</string>
+    <string name="admin_explanation">Truiton Device Admin helps the user to get special privileges, for eg. to access the Truiton network data. These privileges can only be acquired by accepting these policies.</string>
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+    <string name="title_activity_home">Fingerprint</string>
+    <string name="activity_home_desc">You have successfully logged in with fingerprint authentication</string>
+    <string name="activity_home_note">Close and re-open the app to see the fingerprint auth screen again</string>
+</resources>

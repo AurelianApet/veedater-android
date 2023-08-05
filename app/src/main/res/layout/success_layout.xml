@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView android:id="@+id/centerImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/check_new"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal|center_vertical"/>
+            <digimantra.veedaters.CustomViews.TextViewSemiBold
+                android:id="@+id/success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#E01C89"
+                android:textSize="16sp"
+                android:text="Payment Success"
+                android:layout_below="@+id/centerImage"
+                android:layout_marginTop="10dp"
+                android:gravity="center"/>
+            <digimantra.veedaters.CustomViews.TextViewSemiBold android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_new"
+                android:textSize="16sp"
+                android:text="Your payment of \n was successfully completed."
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/success"
+                android:gravity="center"/>
+            <digimantra.veedaters.CustomViews.TextViewSemiBold
+                android:id="@+id/makePayment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Discover People"
+                android:layout_below="@+id/price"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_gradient"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

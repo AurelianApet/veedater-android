@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "803476389740",
+    "firebase_url": "https://veedaters-3594a.firebaseio.com",
+    "project_id": "veedaters-3594a",
+    "storage_bucket": "veedaters-3594a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803476389740:android:999b9d553c59f605",
+        "android_client_info": {
+          "package_name": "digimantra.veedaters"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803476389740-6m7e3kopdjh1hbe936rp38ultu3iu1ak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt4jyYSxw9MWb2BeCybGL2sePIpvT2X_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VeeDaters.iml" filepath="$PROJECT_DIR$/VeeDaters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bubbleImageView/bubbleImageView.iml" filepath="$PROJECT_DIR$/bubbleImageView/bubbleImageView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg4android_demo/ffmpeg4android_demo.iml" filepath="$PROJECT_DIR$/ffmpeg4android_demo/ffmpeg4android_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ffmpeg4android_lib/ffmpeg4android_lib.iml" filepath="$PROJECT_DIR$/ffmpeg4android_lib/ffmpeg4android_lib.iml" />
+    </modules>
+  </component>
+</project>

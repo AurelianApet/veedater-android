@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/videoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                   <FrameLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       >
+                       <com.universalvideoview.UniversalVideoView
+                           android:id="@+id/videoView"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:layout_gravity="center"
+                           app:uvv_autoRotation="true"
+                           app:uvv_fitXY="true" />
+
+                       <com.universalvideoview.UniversalMediaController
+                           android:id="@+id/media_controller"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:visibility="gone"
+                           app:uvv_scalable="true" />
+                   <!-- <com.marcinmoskala.videoplayview.VideoPlayView
+                        android:id="@+id/picassoVideoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:loop="true"
+                        />-->
+                       <View android:id="@+id/clickView"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           />
+                       <ProgressBar android:id="@+id/progress"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center"
+                           android:secondaryProgressTint="@color/pink"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginLeft="5dp">
+    <EditText android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="start"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:hint="user name"
+        android:layout_toLeftOf="@+id/addVideo"
+        android:background="@null"
+
+        />
+    <ImageView android:id="@+id/addVideo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="visible"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+
+        android:src="@drawable/photo_camera"
+        android:layout_gravity="bottom|end"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/userName"
+        android:gravity="center">
+        <ImageView android:id="@+id/genderImage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/undifiine"
+            />
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>
+                   </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <ImageView android:id="@+id/imageOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                        />
+                    <ImageView android:id="@+id/addOne"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/add_image"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="bottom|right"/>
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <ImageView android:id="@+id/imageTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                        />
+                    <ImageView android:id="@+id/addTwo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/add_image"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                        android:layout_gravity="bottom|right"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+               >
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <ImageView android:id="@+id/imageThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                        />
+                    <ImageView  android:id="@+id/addThree"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/add_image"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                        android:layout_gravity="bottom|right"/>
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <ImageView android:id="@+id/imageFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/place_holder"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"                       />
+                    <ImageView android:id="@+id/addFour"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/add_image"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="bottom|right"/>
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#eeeff4">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="#7b7b7b"
+                android:text="BASIC"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/emailRoot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4c4c4c"
+                    android:gravity="end"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+
+            />
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Me"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText android:id="@+id/aboutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:background="@null"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout android:id="@+id/addressRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"/>
+        <digimantra.veedaters.CustomViews.TextReguler android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:background="@null"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout android:id="@+id/birthdayRoot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Birthday"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4c4c4c"
+                    android:text=""
+                    android:hint="MM,dd,yyyy"
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+
+            />
+        <LinearLayout android:id="@+id/statusRoot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4c4c4c"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+
+            />
+        <LinearLayout android:id="@+id/genderRoot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/usergender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4c4c4c"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+
+            />
+        <LinearLayout android:id="@+id/nationRoot"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Nation"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/nation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4c4c4c"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#eeeff4"
+            android:baselineAligned="false">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textColor="#7b7b7b"
+                android:text="MORE"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/religion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Religion"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/religionTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4C4C4C"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout android:id="@+id/sports"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Sport"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/sportTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4C4C4C"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout android:id="@+id/income"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Income"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/incomeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4C4C4C"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_gravity="center"
+
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout android:id="@+id/style"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Style"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <digimantra.veedaters.CustomViews.TextReguler
+                    android:id="@+id/styleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#4C4C4C"
+                    android:text=""
+                    android:layout_marginRight="5dp"
+                    />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+
+                    android:src="@mipmap/gray_arrow"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Alcohol"
+                android:layout_marginLeft="10dp"
+                />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/alchohalSwitch"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Smoke"
+                android:layout_marginLeft="10dp"
+                />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/smokeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#BABABA"
+            android:layout_marginLeft="10dp"        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <digimantra.veedaters.CustomViews.TextReguler
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Tattoo"
+                android:layout_marginLeft="10dp"
+                />
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/tattoSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#BABABA"
+        android:layout_marginLeft="10dp"        />
+    <LinearLayout android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp">
+
+            <digimantra.veedaters.CustomViews.TextViewSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Logout"
+                android:textColor="@color/pink"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:background="@null"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>

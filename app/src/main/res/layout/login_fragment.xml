@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/linearLayout2">
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:id="@+id/registration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/txt_color"
+            android:textSize="12sp"
+            android:padding="3dp"
+            android:text="Don't have an account? Sign Up."/>
+        <digimantra.veedaters.CustomViews.TextReguler
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="12sp"
+            android:layout_marginLeft="5dp"
+            android:padding="3dp"
+            android:text="Forgot Password"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/linearLayout2"
+        android:layout_alignEnd="@+id/linearLayout2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/logo_top"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:src="@drawable/v_logo"
+        android:adjustViewBounds="true"
+       />
+       <!-- <digimantra.veedaters.CustomViews.TextViewSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Vee Daters"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="5dp"/>-->
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+            <digimantra.veedaters.CustomViews.TextSansLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:textSize="14sp"
+                android:text="Name"
+                />
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/txt_color"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <digimantra.veedaters.CustomViews.TextSansLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_color"
+                android:textSize="14sp"
+                android:text="Password"
+                />
+            <EditText android:id="@+id/userPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/txt_color"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerLayout"
+        android:orientation="vertical">
+    <FrameLayout android:id="@+id/logIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+       <!-- <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_bg"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/frame"/>-->
+        <ImageView android:id="@+id/logInImage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:padding="6dp"
+            android:src="@drawable/toplayer"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+        <digimantra.veedaters.CustomViews.TextSansLight
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txt_color"
+            android:textSize="16sp"
+            android:text="Or sign in with"
+            android:gravity="center"
+            android:padding="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            >
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DD392D"
+                android:textSize="25sp"
+                android:text="G"
+                android:gravity="center"
+                android:background="@drawable/circle_bg"
+                android:layout_marginRight="10dp"
+                />
+            <digimantra.veedaters.CustomViews.TextArialBold
+                android:id="@+id/faceBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2454CF"
+                android:textSize="25sp"
+                android:layout_marginLeft="5dp"
+                android:text="f"
+                android:gravity="center"
+                android:background="@drawable/circle_bg"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
